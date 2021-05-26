@@ -1,6 +1,6 @@
 {
   "name": "grapesjs-firebase-storage",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Grapesjs Firebase Storage",
   "main": "dist/grapesjs-firebase-storage.min.js",
   "repository": {
