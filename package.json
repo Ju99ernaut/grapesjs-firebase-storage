@@ -1,0 +1,23 @@
+{
+  "name": "grapesjs-firebase-storage",
+  "version": "1.0.0",
+  "description": "Grapesjs Firebase Storage",
+  "main": "dist/grapesjs-firebase-storage.min.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ju99ernaut/grapesjs-firebase-storage.git"
+  },
+  "scripts": {
+    "start": "grapesjs-cli serve",
+    "build": "grapesjs-cli build",
+    "bump": "npm version patch -m 'Bump v%s'"
+  },
+  "keywords": [
+    "grapesjs",
+    "plugin"
+  ],
+  "devDependencies": {
+    "grapesjs-cli": "^1.0.15"
+  },
+  "license": "MIT"
+}
