@@ -47,27 +47,28 @@ export default (editor, opts = {}) => {
 
     dropZone.on('change', function (e) {
       const files = e.dataTransfer ? e.dataTransfer.files : e.target.files;
-      const file = files[0];
-      const { name } = file;
-      const ref = storage.ref(`${options.fileName}/${file.name}`);
-      const task = ref.put(file);
+      for (let file of files) {
+        const { name } = file;
+        const ref = storage.ref(`${options.fileName}/${file.name}`);
+        const task = ref.put(file);
 
-      task.on('state_change',
-        (snapshot) => {
-          options.onSnapshot && options.onSnapshot(snapshot);
-        },
-        (err) => {
-          options.onError && options.onError(err);
-        },
-        () => {
-          task.snapshot.ref.getDownloadURL().then((src) => {
-            // Add to am
-            am.add({ src, name });
-            // User function
-            options.onComplete && options.onComplete({ name, src });
-          });
-        }
-      );
+        task.on('state_change',
+          (snapshot) => {
+            options.onSnapshot && options.onSnapshot(snapshot);
+          },
+          (err) => {
+            options.onError && options.onError(err);
+          },
+          () => {
+            task.snapshot.ref.getDownloadURL().then((src) => {
+              // Add to am
+              am.add({ src, name });
+              // User function
+              options.onComplete && options.onComplete({ name, src });
+            });
+          }
+        );
+      }
     });
   });
 
