@@ -49,7 +49,7 @@ export default (editor, opts = {}) => {
       const files = e.dataTransfer ? e.dataTransfer.files : e.target.files;
       for (let file of files) {
         const { name } = file;
-        const ref = storage.ref(`${options.fileName}/${file.name}`);
+        const ref = storage.ref(`${options.fileName}/${name}`);
         const task = ref.put(file);
 
         task.on('state_change',
@@ -78,7 +78,7 @@ export default (editor, opts = {}) => {
       .then(res => {
         res.items.forEach(ref => {
           ref.getDownloadURL().then((src) => {
-            const name = ref.name;
+            const { name } = ref;
             am.add({ name, src });
           });
         });
