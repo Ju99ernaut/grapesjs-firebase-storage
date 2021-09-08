@@ -35,8 +35,7 @@ export default (editor, opts = {}) => {
   if (!firebase.apps.length) {
     firebase.initializeApp(options.firebaseConfig);
     storage = firebase.storage();
-  }
-  else {
+  } else {
     firebase.app();
     storage = firebase.storage();
   }
