@@ -1,5 +1,7 @@
 # Grapesjs Firebase Storage
 
+> Tested on firebase v8+. Firebase v9+ not yet supported.
+
 Wrapper for firebase storage. Files uploaded through asset manager will be added to your firebase app storage bucket.
 
 ### HTML
