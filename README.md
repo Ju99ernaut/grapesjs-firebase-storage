@@ -76,8 +76,8 @@ Add Libraries to `head` of document
 <link href="https://unpkg.com/grapesjs/dist/css/grapes.min.css" rel="stylesheet">
 <script src="https://unpkg.com/grapesjs"></script>
 <script src="https://unpkg.com/grapesjs-firebase-storage"></script>
-<link href="https://unpkg.com/grapesjs-template-manager/dist/grapesjs-template-manager.min.css" rel="stylesheet">
-<script src="https://unpkg.com/grapesjs-template-manager"></script>
+<link href="https://unpkg.com/grapesjs-project-manager/dist/grapesjs-project-manager.min.css" rel="stylesheet">
+<script src="https://unpkg.com/grapesjs-project-manager"></script>
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-storage.js"></script>
