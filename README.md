@@ -84,7 +84,7 @@ Add Libraries to `head` of document
 <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
 ```
 
-Initialize `grapesjs`, with `grapesjs-firebase-storage` and `grapesjs-template-manager` plugins.
+Initialize `grapesjs`, with `grapesjs-firebase-storage` and `grapesjs-project-manager` plugins.
 
 ```js
 window.editor = grapesjs.init({
@@ -93,14 +93,14 @@ window.editor = grapesjs.init({
   showOffsets: true,
   fromElement: true,
   noticeOnUnload: false,
-  storageManager: false,
+  pageManager: true,
   assetManager: {
     embedAsBase64: 0,
   },
   storageManager:  {
     type: 'firestore'
   },
-  plugins: ['grapesjs-firebase-storage', 'grapesjs-template-manager'],
+  plugins: ['grapesjs-firebase-storage', 'grapesjs-project-manager'],
   pluginsOpts: {
     'grapesjs-firebase-storage': {
       firebaseConfig: {
